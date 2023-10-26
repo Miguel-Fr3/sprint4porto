@@ -1,8 +1,12 @@
+import Image from 'next/image'
 
 export default function Cabecalho() {
   return (
-    <div>
-      
-    </div>
+    <header>
+        <div>
+            <Image src={""}/>
+
+        </div>
+    </header>
   )
 }
