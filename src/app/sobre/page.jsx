@@ -25,7 +25,7 @@ export default function Sobre() {
                 </nav>
                 </div>
                 <div className="historia">
-                <Image src="/img0.png" alt="Logo Porto" width={320} height={200} priority={true}/>
+                <Image src="/img0.png" alt="Fachada porto" width={320} height={200} priority={true}/>
                     <h1>Conheça nossa história</h1>
                     <h2>
                     Em 1945, a Porto é fundada, em São Paulo/SP, contando com cerca de 50 funcionários.
