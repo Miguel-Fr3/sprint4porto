@@ -9,7 +9,7 @@ export default function Cabecalho({ currentPath }) {
   return (
     <header className='menu'>
         <div className='logo'>
-            <Image src="/Logo.png" alt="Logo Porto" width={250} height={200} priority={true}/>
+            <Image src="/Logo.png" alt="Logo Porto" width={200} height={100} priority={true}/>
         </div>
         <nav className='menu-nav'>
           <div className='rotas'>
