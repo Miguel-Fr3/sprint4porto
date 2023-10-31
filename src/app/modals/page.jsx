@@ -1,6 +1,5 @@
-import React from 'react'
 
-export default function page() {
+export default function Modals() {
   return (
     <div>
         <a href="#">page</a>
