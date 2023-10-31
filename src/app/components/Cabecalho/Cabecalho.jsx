@@ -28,7 +28,7 @@ export default function Cabecalho({ currentPath }) {
               </Link>
             
             
-              <Link href="/sobre-nos" className={currentPath === '/sobre-nos' ? 'active' : ''}>
+              <Link href="/sobre" className={currentPath === '/sobre' ? 'active' : ''}>
                 Sobre nós
               </Link>
             
