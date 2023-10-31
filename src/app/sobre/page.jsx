@@ -1,6 +1,5 @@
-import React from 'react'
 
-export default function page() {
+export default function sobre() {
   return (
     <div>
         <a href="#">page sobre</a>
