@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import './Cabecalho.scss';
 
+
 export default function Cabecalho({ currentPath }) {
   return (
     <header className='menu'>
