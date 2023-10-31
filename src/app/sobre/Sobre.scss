@@ -22,7 +22,7 @@ body .sobre{
             background-color: #FBFBFB;
             margin-right: 200px;
             width: 600px;
-            height: 600px;
+            height: 520px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -43,7 +43,32 @@ body .sobre{
                   a:hover{
                     color: #FBFBFB;
                   }
+                }
+              }
+              .historia{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 11rem;
+
+
+                Image {
+                    margin-right: 90px;
+                    }
+                    .botao{
+                        margin-top: 10px;
+    
+                        a{
+                            background-color: #87F5E8;
+                            font-weight: bolder;
+                            color: #009EE2;
+                            border: 2px solid #009EE2;
+                          }
+                          a:hover{
+                            color: #FBFBFB;
+                          }
+                      }
               }
           }
       }
-  }
