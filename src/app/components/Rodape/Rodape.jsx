@@ -4,7 +4,7 @@ export default function Rodape() {
   return (
     <>
       <footer>
-      <Image src="/Logo.png" alt="Logo Porto" width={250} height={200} priority={true}/>
+      <Image src="/Logo.png" alt="Logo Porto" width={320} height={200} priority={true}/>
       </footer>
     </>
   )
