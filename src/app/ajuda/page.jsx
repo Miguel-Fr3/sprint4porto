@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function page() {
+export default function Ajuda() {
   return (
     <div>
         <a href="#">page</a>
