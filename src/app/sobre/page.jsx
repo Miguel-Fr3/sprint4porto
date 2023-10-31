@@ -1,5 +1,5 @@
 import Image from "next/image"
-
+import './Sobre.scss'
 export default function Sobre() {
   return (
 <main className="sobre">
