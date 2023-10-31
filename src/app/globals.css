@@ -1,27 +1,8 @@
-.menu{
-    display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 107px;
-  top: 0px;
-  background: #FBFBFB;
-  border: 0.824709px solid #000000;
-
-    & div{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-    }
-        nav{
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-direction: row;
-            font-size: 2rem;
-            font-weight: bolder;
-        }
-    
-  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: black;
 }

@@ -4,8 +4,10 @@ import Cabecalho from './components/Cabecalho/Cabecalho'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Porto',
-  description: 'Sprint 4 Porto seguro',
+
+  title: 'Sprint Porto',
+  description: 'entrega 4 Porto',
+
 }
 
 export default function RootLayout({ children }) {
