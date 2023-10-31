@@ -1,7 +1,9 @@
+import Image from "next/image"
 
 export default function Sobre() {
   return (
-    <main className="sobre">
+<main className="sobre">
+
             <div>
                 <h1 className="proposito">Nosso propósito é</h1>
                 <h1 className="porto">Ser um porto seguro para as pessoas</h1>
@@ -18,9 +20,21 @@ export default function Sobre() {
                 rm551521 - Patrick Jaguski <br />
 
                 rm552213 - Ye</h2> <br />
-
+                <nav>
+                <a href="https://github.com/Miguel-Fr3/porto-sprint3" target="_blank">Saiba mais</a>
+                </nav>
                 </div>
-                
+                <div className="historia">
+                <Image src="/img0.png" alt="Logo Porto" width={320} height={200} priority={true}/>
+                    <h1>Conheça nossa história</h1>
+                    <h2>
+                    Em 1945, a Porto é fundada, em São Paulo/SP, contando com cerca de 50 funcionários.
+                    </h2>
+
+                <div className="botao">
+                    <a href="https://www.portoseguro.com.br/institucional/a-porto-seguro/historia" target="_blank">Conheça mais</a>
+                </div>
+                </div>
                 </div>
         </main>
   )
