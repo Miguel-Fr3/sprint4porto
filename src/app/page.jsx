@@ -12,14 +12,14 @@ export default function Home() {
               Reparos do carro Reparo rápido e Supermartelinho de Ouro.
             </p>
           </div>
-          <Image src="/img3.png" alt="Desenho de Guincho" width={320} height={200} priority={true} className="imgC"/>
+          <Image src="/img3.png" alt="Desenho de Guincho" width={450} height={210} priority={true} className="imgC"/>
         </div>
         <div className="inferior">
           <div>
             <h1>Reparos do carro</h1>
             <p>Reparo rápido e Supermartelinho de Ouro.</p>
           </div>
-          <Image src="/img8.png" alt="Homens consertando carro" width={320} height={200} priority={true} className="imgC"/>
+          <Image src="/img8.png" alt="Homens consertando carro" width={450} height={210} priority={true} className="imgC"/>
         </div>
       </section>
     </main>
