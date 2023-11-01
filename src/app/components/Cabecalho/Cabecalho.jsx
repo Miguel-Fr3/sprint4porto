@@ -1,13 +1,16 @@
+'use client'
 import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import './Cabecalho.scss';
-import { useNavigation } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 
 export default function Cabecalho() {
-  const { pathname } = useNavigation();
+
+  const pathname = usePathname();
+
   return (
     <header className='menu'>
         <div className='logo'>
@@ -38,10 +41,10 @@ export default function Cabecalho() {
           </div>
         </nav>
         <div className="icon">
-          <Link href="#">
+          <Link href="/ajuda">
             <FontAwesomeIcon icon={faSearch} className="lupa" />
           </Link>
-          <Link href="#">
+          <Link href="/login">
             <FontAwesomeIcon icon={faUserCircle} className="usuario" />
           </Link>
         </div>

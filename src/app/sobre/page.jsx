@@ -4,7 +4,7 @@ export default function Sobre() {
   return (
 <main className="sobre">
 
-            <div>
+            <div className="pp">
                 <h1 className="proposito">Nosso propósito é</h1>
                 <h1 className="porto">Ser um porto seguro para as pessoas</h1>
             </div>
