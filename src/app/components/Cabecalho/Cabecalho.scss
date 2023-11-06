@@ -28,6 +28,13 @@
         align-items: center;
         text-decoration: none;
 
+        .active {
+
+              color: #00BFFF; 
+              font-weight: bold; 
+              text-decoration: none;
+
+    }
 
             a{
                 margin-right: 10rem;
@@ -39,22 +46,19 @@
       }
       
     }
-    .active {
-            a{
-                color: #00BFFF; 
-                font-weight: bold; 
-                text-decoration: none;
-            }
-      }
+
 
       .icon{
         display: flex;
         justify-content: space-around;
         align-items: center;
         font-size: 3rem;
-  
+        color: #000;
+
+
         .usuario{
             margin-left: 1rem;
+            
           }   
     }
   }

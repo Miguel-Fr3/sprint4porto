@@ -8,8 +8,8 @@ body .home-page{
     overflow: auto; 
 
     section{
-        margin-top: 3rem;
-        margin-bottom: 4.48rem;
+        margin-top: 5rem;
+
 
         .superior{
             display: flex;
@@ -24,17 +24,16 @@ body .home-page{
             text-align: center;
             font-size: 2rem;
             }
-            img{
+            .imgC{
+                border: 2px solid #000000;
+                background-color: #506CFE;
                 margin-right: 10px;
               }
             
         }
-        .imgC{
-            border: 2px solid #000000;
-            background-color: #506CFE;
-          }
+
         .inferior{
-            margin-top: 61px;
+            margin-top: 10rem;
             display: flex;
             justify-content: center;
             flex-direction: row;
@@ -48,7 +47,10 @@ body .home-page{
                 text-align: center;
                 font-size: 2rem;
                 }
-                img{
+
+                .imgC{
+                    border: 2px solid #000000;
+                    background-color: #506CFE;
                     margin-left: 10px;
                   }
           }
