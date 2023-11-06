@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog, faContactBook, faExclamationTriangle, faMobile, faMoneyBill1Wave, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-
+import "./ajuda.scss"
 export default function Ajuda() {
   return (
 <main className="ajuda">
