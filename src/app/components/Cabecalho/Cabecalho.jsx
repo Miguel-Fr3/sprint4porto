@@ -41,7 +41,7 @@ export default function Cabecalho() {
           </div>
         </nav>
         <div className="icon">
-          <Link href="/ajuda">
+          <Link href="/ajuda" >
             <FontAwesomeIcon icon={faSearch} className="lupa" />
           </Link>
           <Link href="/login">
