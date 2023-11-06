@@ -15,7 +15,11 @@ export default function Ajuda() {
                 <div><FontAwesomeIcon icon={faContactBook} className='icona'/><h1>Contatos</h1></div>
                 <div><FontAwesomeIcon icon={faCog} className='icona'/><h1>Editar dados</h1></div>
             </div>
-
+            <div className="inferior">
+                <div><FontAwesomeIcon icon={faMobile} className='icona'/><h1>App porto</h1></div>
+                <div><FontAwesomeIcon icon={faMoneyBill1Wave} className='icona'/><h1>Pagamentos</h1></div>
+                <div><FontAwesomeIcon icon={faThumbsUp} className='icona'/><h1>Benefícios</h1></div>
+            </div>
         </main>
   )
 }
