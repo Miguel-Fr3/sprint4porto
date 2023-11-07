@@ -21,7 +21,7 @@ export default function Sobre() {
 
                 rm552213 - Ye</h2> <br />
                 <nav>
-                <a href="https://github.com/Miguel-Fr3/porto-sprint3" target="_blank">Saiba mais</a>
+                <a href="https://github.com/Miguel-Fr3/sprint4porto" target="_blank">Saiba mais</a>
                 </nav>
                 </div>
                 <div className="historia">
