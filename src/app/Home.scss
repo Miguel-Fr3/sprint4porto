@@ -71,7 +71,7 @@ body .home-page{
         overflow: auto; 
     
         section{
-            margin-top: 1rem;
+            margin-top: 3rem;
             margin-bottom: 4.48rem;
     
             .superior{
@@ -81,16 +81,16 @@ body .home-page{
                 align-items: center;
             h1{
                 text-align: center;
-                font-size: 2rem;
+                font-size: 1.5rem;
                 }
                 p{
                 text-align: center;
-                font-size: 1.5rem;
+                font-size: 1.2rem;
                 }
                 .imgC{
                     margin-top: 1rem;
-                    max-width: 400px;
-                    height: 200px;
+                    max-width: 300px;
+                    height: 150px;
                     border: 2px solid #000000;
                     background-color: #506CFE;
 
@@ -99,7 +99,7 @@ body .home-page{
             }
     
             .inferior{
-                margin-top: 1rem;
+                margin-top: 3rem;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
@@ -107,17 +107,17 @@ body .home-page{
                 
                 h1{
                     text-align: center;
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     }
                     p{
                     text-align: center;
-                    font-size: 1.5rem;
+                    font-size: 1.2rem;
                     }
     
                     .imgC{
                         margin-top: 1rem;
-                        max-width: 400px;
-                        height: 200px;
+                        max-width: 300px;
+                        height: 150px;
                         border: 2px solid #000000;
                         background-color: #506CFE;
 
