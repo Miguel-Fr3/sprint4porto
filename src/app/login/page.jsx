@@ -19,7 +19,7 @@ export default function Login() {
             <input type="checkbox" id="check" /> 
             <label htmlFor="check">Lembre de mim</label> 
           </div>
-          <Link href="#">Sou novo aqui</Link>
+          <Link href="/login/cadastro">Sou novo aqui</Link>
         </form>
       </div>
     </main>
