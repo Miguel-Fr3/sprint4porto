@@ -12,6 +12,8 @@ export default function Login() {
           <h1>Acessar Conta</h1>
           <label htmlFor="Cpf">Preencha seus dados de acesso para continuar.</label>
           <input type="text" id="Cpf" placeholder="CPF ou CNPJ" />
+          <label htmlFor="Senha"></label>
+          <input type="password" id="Senha" placeholder="Senha" />
           <div className="register">
             <input type="submit" id="logar" value="Entrar" />
           </div>
