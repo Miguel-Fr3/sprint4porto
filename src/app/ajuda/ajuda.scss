@@ -1,0 +1,91 @@
+
+body .ajuda{
+    background-color: #EBF2EC;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; 
+    z-index: 999; 
+    overflow: auto; 
+    .help{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+      
+         label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #00A1FC;
+            font-weight: bolder;
+            font-size: 1.5rem;
+          
+          }
+          input{
+            width: 80%;
+            padding: 8px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            background-color: #fbfbfb;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 5rem;
+            text-align: center;
+            font-size: 1.5rem;
+          }
+      }
+      .superior{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        
+        div{
+            border-radius: 5px;
+            border: 2px solid #000000;
+            padding-top: 10px;
+            width: 300px;
+            height: 250px;
+            margin-top: 50px;
+            margin-bottom: 100px;
+            .icona{
+                text-align: center;
+                margin: auto;
+                font-size: 4rem;
+                margin-left: 40%;
+              }
+              h1{
+                text-align: center;
+              }
+          }
+      }
+      .inferior{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        
+        div{
+            border-radius: 5px;
+            border: 2px solid #000000;
+            border: 2px solid #000000;
+            padding-top: 10px;
+            width: 300px;
+            height: 250px;
+            
+            .icona{
+                text-align: center;
+                margin: auto;
+                font-size: 4rem;
+                margin-left: 40%;
+              }
+              h1{
+                text-align: center;
+              }
+          }
+      }
+  }
+
+
+

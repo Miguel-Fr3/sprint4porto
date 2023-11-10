@@ -1,0 +1,144 @@
+   
+ .modal {
+    background-color: #79A3C9;
+    left: 0;
+
+    section{
+        display: flex;
+        flex-direction: column;
+      
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+            margin-top: 30px;
+
+            h1{
+                text-align: center;
+                font-size: 2rem;
+                }
+            p{
+                text-align: center;
+                font-size: 1.5rem;
+                }
+            .imgM{
+                margin-bottom: 30px;
+                border: 2px solid #000000;
+              }
+          }
+      }
+  }
+
+  // Mobile
+
+  @media (max-width:599px){
+       
+ .modal {
+    background-color: #79A3C9;
+    left: 0;
+
+    section{
+        display: flex;
+        flex-direction: column;
+      
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+            margin-top: 30px;
+
+            h1{
+                text-align: center;
+                font-size: 1.5rem;
+                }
+            p{
+                text-align: center;
+                font-size: 1rem;
+                }
+            .imgM{
+                max-width: 300px;
+                height: 150px;
+                margin-bottom: 30px;
+                border: 2px solid #000000;
+              }
+          }
+      }
+  }
+  }
+
+  @media (min-width: 600px) and (max-width:900px){
+    .modal {
+        background-color: #79A3C9;
+        left: 0;
+    
+        section{
+            display: flex;
+            flex-direction: column;
+          
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 50px;
+                margin-top: 30px;
+    
+                h1{
+                    text-align: center;
+                    font-size: 2rem;
+                    }
+                p{
+                    text-align: center;
+                    font-size: 1.5rem;
+                    }
+                .imgM{
+                    width: 600px;
+                    height: 300px;
+                    margin-bottom: 30px;
+                    border: 2px solid #000000;
+                  }
+              }
+          }
+      }
+  }
+
+  @media (min-width: 901px) and (max-width:1399px){
+    .modal {
+        background-color: #79A3C9;
+        left: 0;
+    
+        section{
+            display: flex;
+            flex-direction: column;
+          
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 50px;
+                margin-top: 30px;
+    
+                h1{
+                    text-align: center;
+                    font-size: 2rem;
+                    }
+                p{
+                    text-align: center;
+                    font-size: 1.5rem;
+                    }
+                .imgM{
+                    width: 600px;
+                    height: 300px;
+                    margin-bottom: 30px;
+                    border: 2px solid #000000;
+                  }
+              }
+          }
+      }
+    }
+  

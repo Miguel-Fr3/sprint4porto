@@ -8,8 +8,8 @@ body .home-page{
     overflow: auto; 
 
     section{
-        margin-top: 3rem;
-        margin-bottom: 4.48rem;
+        margin-top: 5rem;
+
 
         .superior{
             display: flex;
@@ -24,17 +24,16 @@ body .home-page{
             text-align: center;
             font-size: 2rem;
             }
-            img{
+            .imgC{
+                border: 2px solid #000000;
+                background-color: #506CFE;
                 margin-right: 10px;
               }
             
         }
-        .imgC{
-            border: 2px solid #000000;
-            background-color: #506CFE;
-          }
+
         .inferior{
-            margin-top: 61px;
+            margin-top: 10rem;
             display: flex;
             justify-content: center;
             flex-direction: row;
@@ -48,9 +47,212 @@ body .home-page{
                 text-align: center;
                 font-size: 2rem;
                 }
-                img{
+
+                .imgC{
+                    border: 2px solid #000000;
+                    background-color: #506CFE;
                     margin-left: 10px;
                   }
           }
       }
   }
+
+
+//   Mobile
+
+@media (max-width:599px){
+    body .home-page{
+        background-color: #BEC5FF;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; 
+        z-index: 999; 
+        overflow: auto; 
+    
+        section{
+            margin-top: 3rem;
+            margin-bottom: 4.48rem;
+    
+            .superior{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            h1{
+                text-align: center;
+                font-size: 1.5rem;
+                }
+                p{
+                text-align: center;
+                font-size: 1.2rem;
+                }
+                .imgC{
+                    margin-top: 1rem;
+                    max-width: 300px;
+                    height: 150px;
+                    border: 2px solid #000000;
+                    background-color: #506CFE;
+
+                  }
+                
+            }
+    
+            .inferior{
+                margin-top: 3rem;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                
+                h1{
+                    text-align: center;
+                    font-size: 1.5rem;
+                    }
+                    p{
+                    text-align: center;
+                    font-size: 1.2rem;
+                    }
+    
+                    .imgC{
+                        margin-top: 1rem;
+                        max-width: 300px;
+                        height: 150px;
+                        border: 2px solid #000000;
+                        background-color: #506CFE;
+
+                      }
+              }
+          }
+      }
+}
+
+// tablet
+
+@media (min-width: 600px) and (max-width:900px){
+    body .home-page{
+        background-color: #BEC5FF;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; 
+        z-index: 999; 
+        overflow: auto; 
+    
+        section{
+            margin-top: 1rem;
+            margin-bottom: 4.48rem;
+    
+            .superior{
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+            h1{
+                text-align: center;
+                font-size: 2rem;
+                }
+                p{
+                text-align: center;
+                font-size: 1.5rem;
+                }
+                .imgC{
+                    margin-top: 1rem;
+                    max-width: 400px;
+                    height: 200px;
+                    border: 2px solid #000000;
+                    background-color: #506CFE;
+
+                  }
+                
+            }
+    
+            .inferior{
+                margin-top: 1rem;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                
+                h1{
+                    text-align: center;
+                    font-size: 2rem;
+                    }
+                    p{
+                    text-align: center;
+                    font-size: 1.5rem;
+                    }
+    
+                    .imgC{
+                        margin-top: 1rem;
+                        max-width: 400px;
+                        height: 200px;
+                        border: 2px solid #000000;
+                        background-color: #506CFE;
+
+                      }
+              }
+          }
+      }
+}
+
+@media (min-width: 901px) and (max-width:1399px){
+    body .home-page{
+        background-color: #BEC5FF;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; 
+        z-index: 999; 
+        overflow: auto; 
+    
+        section{
+            margin-top: 5rem;
+    
+    
+            .superior{
+                display: flex;
+                justify-content: center;
+                flex-direction: row-reverse;
+                align-items: center;
+            h1{
+                text-align: center;
+                font-size: 2.5rem;
+                }
+                p{
+                text-align: center;
+                font-size: 2rem;
+                }
+                .imgC{
+                    border: 2px solid #000000;
+                    background-color: #506CFE;
+                    margin-right: 10px;
+                  }
+                
+            }
+    
+            .inferior{
+                margin-top: 10rem;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                align-items: center;
+                
+                h1{
+                    text-align: center;
+                    font-size: 2.5rem;
+                    }
+                    p{
+                    text-align: center;
+                    font-size: 2rem;
+                    }
+    
+                    .imgC{
+                        border: 2px solid #000000;
+                        background-color: #506CFE;
+                        margin-left: 10px;
+                      }
+              }
+          }
+      }
+}

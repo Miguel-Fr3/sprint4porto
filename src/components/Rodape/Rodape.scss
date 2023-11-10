@@ -1,0 +1,27 @@
+.rodape{
+    padding-bottom: 10px;
+    background: #000000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    .logo{
+        width: 320px;
+        height: 200px;
+    }
+}
+    // mobile
+@media (max-width:599px){
+    .rodape{
+        padding-bottom: 1px;
+        background: #000000;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    
+        .logo{
+            width: 200px;
+            height: 100px;
+        }
+    }
+}
