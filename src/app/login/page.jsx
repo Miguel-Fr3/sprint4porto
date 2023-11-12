@@ -68,7 +68,7 @@ export default function Login() {
                     
                     setTimeout(()=>{
                         setMsgStatus("");
-                        navigate.push("/");
+                        navigate.push("/ajuda");
                     },5000);
                 }else{
                     setMsgStatus("USUÁRIO E OU SENHA INVÁLIDOS!");
