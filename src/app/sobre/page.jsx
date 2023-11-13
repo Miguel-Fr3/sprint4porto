@@ -21,11 +21,11 @@ export default function Sobre() {
 
                 rm552213 - Ye</h2> <br />
                 <nav>
-                <a href="https://github.com/Miguel-Fr3/porto-sprint3" target="_blank">Saiba mais</a>
+                <a href="https://github.com/Miguel-Fr3/sprint4porto" target="_blank">Saiba mais</a>
                 </nav>
                 </div>
                 <div className="historia">
-                <Image src="/img0.png" alt="Fachada porto" width={600} height={300} priority={true}/>
+                <Image src="/img0.png" alt="Fachada porto" width={600} height={300} priority={true} className="imgS"/>
                     <h1>Conheça nossa história</h1>
                     <h2>
                     Em 1945, a Porto é fundada, em São Paulo/SP, contando com cerca de 50 funcionários.

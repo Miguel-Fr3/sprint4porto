@@ -13,8 +13,8 @@ export default function Cabecalho() {
 
   return (
     <header className='menu'>
-        <div className='logo'>
-            <Image src="/Logo.png" alt="Logo Porto" width={200} height={100} priority={true}/>
+        <div >
+            <Image src="/Logo.png" alt="Logo Porto" width={100} height={50}  priority={true} className='logo'/>
         </div>
         <nav className='menu-nav'>
           <div className='rotas'>
