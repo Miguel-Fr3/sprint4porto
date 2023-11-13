@@ -9,13 +9,11 @@ import { useRouter } from "next/navigation";
 
 export default function Login() {
   
-    //Utilizando o redirecionamento quando estamos no cliente:
     const navigate = useRouter();
 
     const [msgstatus, setMsgStatus] = useState("");
     const [classLoginMsg, setClassLoginMsg] = useState("");
 
-    //Criando um useState para comportar o usuário:
     const [usuario, setUsuario] = useState({
         "info":"login",
         "cpf":"",
@@ -32,15 +30,11 @@ export default function Login() {
         }
     }, [msgstatus]);
     
-    //Função de preenchimento do FORM...
     const handleChange = (e)=>{
-        //Destructuring
         const{name, value} = e.target;
-        //Prenchendo o campo, utilizando o useState com SPREAD + OnChange:
         setUsuario({...usuario,[name]:value});
     }
 
-    //Função de validação e ENVIO dos dados.
     const handleSubmit = async (e)=>{
         e.preventDefault();
 
@@ -58,10 +52,8 @@ export default function Login() {
 
                 if(user){
 
-                    //Gerando o token do usuário:
                     const token = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2);
 
-                    //Armazenar o token no sessionStorage:
                     sessionStorage.setItem("token-user",token);
 
                     setMsgStatus("Login realizado com SUCESSO!");
@@ -94,11 +86,11 @@ export default function Login() {
           <h1>Acessar Conta</h1>
           <div>
             <label htmlFor="Cpf">Preencha seus dados de acesso para continuar.</label>
-            <input type="text" id="Cpf" placeholder="CPF ou CNPJ" value={usuario.cpf} onChange={handleChange}/>
+            <input type="text" id="Cpf" name='cpf' placeholder="CPF ou CNPJ" value={usuario.cpf} onChange={handleChange}/>
           </div>
           <div>
             <label htmlFor="Senha"></label>
-            <input type="password" id="Senha" placeholder="Senha" value={usuario.senha} onChange={handleChange}/>
+            <input type="password" id="Senha" name='senha' placeholder="Senha" value={usuario.senha} onChange={handleChange}/>
           </div>
           <div className="register">
             <input type="submit" id="logar" value="Entrar" />
