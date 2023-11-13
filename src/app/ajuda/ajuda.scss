@@ -151,6 +151,35 @@ body .ajuda{
                 }
             }
         }
+        .inferior{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          
+          div{
+            border-radius: 5px;
+            border: 2px solid #000000;
+            border: 2px solid #000000;
+            padding-top: 10px;
+            width: 300px;
+            height: 250px;
+            margin-top: 50px;
+              
+              .icona{
+                  text-align: center;
+                  margin: auto;
+                  font-size: 4rem;
+                  margin-left: 40%;
+                }
+                h1{
+                  text-align: center;
+                }
+            }
+        }
+    }
+  }
+
 
 
 
