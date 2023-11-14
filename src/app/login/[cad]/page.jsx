@@ -1,7 +1,8 @@
+"use client";
 import React from 'react'
 import Link from 'next/link'
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import "../login.scss"
