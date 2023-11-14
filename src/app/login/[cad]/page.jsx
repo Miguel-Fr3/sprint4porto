@@ -17,8 +17,8 @@ export default function Cadastro() {
   });
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUsuario({ ...usuario, [name]: value });
+    const { cpf, value } = e.target;
+    setUsuario({ ...usuario, [cpf]: value });
   };
 
   const handleSubmit = async (e) => {
@@ -37,13 +37,11 @@ export default function Cadastro() {
         const user = await response.json();
 
         if (user) {
-
-            setUsuario({
-                "info": "cadastro",
-                "cpf": "",
-                "senha": ""
-            });
-            router.push('/login');
+            setMsgStatus("Cadastro realizado com SUCESSO!");
+            setTimeout(()=>{
+            setMsgStatus("");
+            router.push("/");
+            },5000);
 
         } else {
 
