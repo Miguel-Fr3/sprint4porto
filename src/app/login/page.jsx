@@ -12,7 +12,6 @@ export default function Login() {
 
   const router = useRouter();
 
-  const [msgstatus, setMsgStatus] = useState("");
   const [classLoginMsg, setClassLoginMsg] = useState("");
 
   const [usuario, setUsuario] = useState({
@@ -21,15 +20,7 @@ export default function Login() {
     "senha": ""
   });
 
-  useEffect(() => {
-    if (msgstatus === "Login realizado com SUCESSO!") {
-      setClassLoginMsg("login-suc");
-    } else if (msgstatus === "USUÁRIO E OU SENHA INVÁLIDOS!") {
-      setClassLoginMsg("login-err");
-    } else {
-      setClassLoginMsg("login");
-    }
-  }, [msgstatus]);
+
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -44,7 +35,7 @@ export default function Login() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                // "Access-Control-Allow-Origin": "http://localhost:3000"
+                
             },
             body: JSON.stringify(usuario),
         });
@@ -57,36 +48,22 @@ export default function Login() {
 
                 sessionStorage.setItem("token-user", token);
 
-                setMsgStatus("Login realizado com SUCESSO!");
-
-                setTimeout(() => {
-                    setMsgStatus("");
-                    router.replace("/ajuda");
-                }, 5000);
             } else {
-                setMsgStatus("USUÁRIO E OU SENHA INVÁLIDOS!");
-                setTimeout(() => {
-                    setMsgStatus("");
+                
                     setUsuario({
                         "info": "login",
                         "cpf": "",
                         "senha": "",
                     });
-                }, 5000);
+
             }
         } else {
             console.error("Erro na solicitação:", response.statusText);
-            setMsgStatus("Erro durante o login. Por favor, tente novamente.");
-            setTimeout(() => {
-                setMsgStatus("");
-            }, 5000);
+
         }
     } catch (error) {
         console.error("Erro durante a solicitação:", error);
-        setMsgStatus("Erro durante a solicitação. Por favor, tente novamente.");
-        setTimeout(() => {
-            setMsgStatus("");
-        }, 5000);
+
     }
 };
 
