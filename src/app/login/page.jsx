@@ -12,7 +12,7 @@ export default function Login() {
 
   const router = useRouter();
 
-  const [classLoginMsg, setClassLoginMsg] = useState("");
+
 
   const [usuario, setUsuario] = useState({
     "info": "login",
@@ -31,12 +31,13 @@ export default function Login() {
     e.preventDefault();
 
     try {
-        const response = await fetch("http://localhost:8080/api/login", {
+        const response = await fetch("http://localhost:8080/api/login/autenticar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
                 
             },
+            mode: 'cors',
             body: JSON.stringify(usuario),
         });
 

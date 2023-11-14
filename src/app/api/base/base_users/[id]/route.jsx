@@ -18,7 +18,7 @@ export async function GET(request, {params}) {
 
 //Criando a função do LOGIN
 const handleLogin = async (cpf,senha)=>{
-    const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
+    const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login/autenticar', 'utf8');
     const usuarios = await JSON.parse(file);
 
     try{
