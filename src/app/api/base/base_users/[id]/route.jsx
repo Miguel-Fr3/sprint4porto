@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request, {params}) {
     
-    const file  = await  fs.readFile(process.cwd() + '/src/app/api/base/data.json', 'utf8');
+    const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
 
     const id = params.id;
 
@@ -18,7 +18,7 @@ export async function GET(request, {params}) {
 
 //Criando a função do LOGIN
 const handleLogin = async (cpf,senha)=>{
-    const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
+    const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login/autenticar', 'utf8');
     const usuarios = await JSON.parse(file);
 
     try{
@@ -36,7 +36,7 @@ const handleLogin = async (cpf,senha)=>{
 }
 
 //Criando a função do CADASTRO
-const handleCadastrar = async (cpf,nome,senha)=>{
+const handleCadastrar = async (cpf,senha)=>{
     const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
     const usuarios = await JSON.parse(file);
 
@@ -66,14 +66,14 @@ const handleCadastrar = async (cpf,nome,senha)=>{
 
 export async function POST(request, response){
     //Pegando os dados do request com o await e destructuring.
-    const {info,cpf,nome,senha} = await request.json();
+    const {info,cpf,senha} = await request.json();
 
-    console.log(info,nome,cpf,senha);
+    console.log(info,cpf,senha);
 
     if(info == "login"){
         return  NextResponse.json( await handleLogin(cpf,senha));
     } else if(info == "cadastro"){
-        return  NextResponse.json( await handleCadastrar(cpf,nome,senha));
+        return  NextResponse.json( await handleCadastrar(cpf,senha));
     }
     return NextResponse.json({"status":false});
 }
