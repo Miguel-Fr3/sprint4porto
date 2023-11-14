@@ -48,7 +48,6 @@ const handleCadastrar = async (cpf,nome,senha)=>{
         //Criando o objeto do usuário:
         const user = {
             "id":id,
-            "nome":nome,
             "cpf":cpf,
             "senha":senha
         }
