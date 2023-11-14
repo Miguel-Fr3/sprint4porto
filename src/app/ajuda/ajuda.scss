@@ -180,7 +180,48 @@ body .ajuda{
     }
   }
 
+ //tablet
+  @media (min-width: 600px) and (max-width:900px){
 
-
+    body .ajuda{
+      background-color: #EBF2EC;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh; 
+      z-index: 999; 
+      overflow: auto;  
+      .help{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        
+           label{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            color: #00A1FC;
+            font-weight: bolder;
+            font-size: 1.5rem;
+            
+            }
+            input{
+              width: 80%;
+              padding: 8px;
+              border: 2px solid #ccc;
+              border-radius: 5px;
+              box-sizing: border-box;
+              background-color: #fbfbfb;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              border-radius: 5rem;
+              text-align: center;
+              font-size: 1.5rem;;
+            }
+        }
+        
+  }
 
 
