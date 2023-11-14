@@ -23,8 +23,8 @@ export default function Login() {
 
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUsuario({ ...usuario, [name]: value });
+    const { cpf, value } = e.target;
+    setUsuario({ ...usuario, [cpf]: value });
   }
 
   const handleSubmit = async (e) => {
