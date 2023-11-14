@@ -75,23 +75,6 @@ body .login{
   .flecha path{
     color: #009EE2;
   }
-  .check{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-items: center;
-  }
-  .check input{
-    width: 20px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #fbfbfb;
-  }
-  .check label{
-    text-align: center;font-size: 1.8rem;
-    font-weight: bold;
-  }
   .form a{
     color: #009EE2;
     font-size: 1rem;
