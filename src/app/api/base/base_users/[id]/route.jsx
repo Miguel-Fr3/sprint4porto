@@ -16,8 +16,8 @@ export async function GET(request, {params}) {
     }
 }
 
-//Criando a função do LOGIN
-const handleLogin = async (cpf,senha)=>{
+//LOGIN
+const handleLogin = async (CPF,senha)=>{
     const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login/autenticar', 'utf8');
     const usuarios = await JSON.parse(file);
 
@@ -25,7 +25,7 @@ const handleLogin = async (cpf,senha)=>{
         for (let x = 0; x < usuarios.usuarios.length; x++) {
             const userFile = usuarios.usuarios[x];
 
-            if(userFile.cpf == cpf && userFile.senha == senha){
+            if(userFile.CPF == CPF && userFile.senha == senha){
                 return userFile;
             }
         }
@@ -35,27 +35,27 @@ const handleLogin = async (cpf,senha)=>{
  }
 }
 
-//Criando a função do CADASTRO
-const handleCadastrar = async (cpf,senha)=>{
+//CADASTRO
+const handleCadastrar = async (CPF,senha)=>{
     const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
     const usuarios = await JSON.parse(file);
 
     try{
         
-        //Gerando o ID do usuário:
+
         const id =  (usuarios.usuarios[usuarios.usuarios.length-1].id + 1);
 
-        //Criando o objeto do usuário:
+
         const user = {
             "id":id,
-            "cpf":cpf,
+            "CPF":CPF,
             "senha":senha
         }
 
-        //Adicionando o usuário no array:
+
         usuarios.usuarios.push(user);
 
-        //Salvando o arquivo:
+
         await fs.writeFile(process.cwd() + 'http://localhost:8080/api/login', JSON.stringify(usuarios));
 
         return user;
@@ -65,15 +65,15 @@ const handleCadastrar = async (cpf,senha)=>{
 }
 
 export async function POST(request, response){
-    //Pegando os dados do request com o await e destructuring.
-    const {info,cpf,senha} = await request.json();
 
-    console.log(info,cpf,senha);
+    const {info,CPF,senha} = await request.json();
+
+    console.log(info,CPF,senha);
 
     if(info == "login"){
-        return  NextResponse.json( await handleLogin(cpf,senha));
+        return  NextResponse.json( await handleLogin(CPF,senha));
     } else if(info == "cadastro"){
-        return  NextResponse.json( await handleCadastrar(cpf,senha));
+        return  NextResponse.json( await handleCadastrar(CPF,senha));
     }
     return NextResponse.json({"status":false});
 }

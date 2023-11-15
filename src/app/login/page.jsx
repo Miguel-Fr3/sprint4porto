@@ -9,75 +9,82 @@ import { useRouter } from 'next/navigation';
 
 export default function Login() {
 
-
   const router = useRouter();
 
-
+  const [loginstatus, setLoginStatus] = useState("");
+  const [classLogin, setClassLogin] = useState("");
 
   const [usuario, setUsuario] = useState({
-    "info": "login",
-    "cpf": "",
-    "senha": ""
-  });
+    "info":"login",
+    "CPF":"",
+    "senha":""
+});
 
+useEffect(() => {
+  if(loginstatus == "Sucesso!"){
+    setClassLogin("login-suc");
+   }else if(loginstatus == "USUÁRIO E OU SENHA INVÁLIDOS!"){
+    setClassLogin("login-err");
+   }else{
+    setClassLogin("login");
+   }
+}, [loginstatus]);
 
+const handleChange = (e)=>{
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setUsuario({ ...usuario, [name]: value });
-  }
+  const{name ,value} = e.target;
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  setUsuario({...usuario,[name]:value});
+}
 
-    try {
-        const response = await fetch("http://localhost:8080/api/login/autenticar", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                
-            },
-            mode: 'cors',
-            body: JSON.stringify(usuario),
-        });
+const handleSubmit = async (e)=>{
+  e.preventDefault();
 
-        if (response.ok) {
-            const user = await response.json();
+  try {
+    const response = await fetch("http://localhost:8080/api/login/autenticar",{
+        method: "POST",
+        headers:{
+            "Content-Type":"application/json"
+        },
+        body:  JSON.stringify(usuario)
+    });
 
-            if (user) {
-                const token = Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2);
+    if(response.ok){
+        const user = await response.json();
 
-                sessionStorage.setItem("token-user", token);
+        if(user){
 
-            } else {
-                
-                    setUsuario({
-                        "info": "login",
-                        "cpf": "",
-                        "senha": "",
-                    });
-
-            }
-        } else {
-            console.error("Erro na solicitação:", response.statusText);
-
+            setLoginStatus("Sucesso!");
+            
+            setTimeout(()=>{
+              setLoginStatus("");
+                router.push("/");
+            },5000);
+        }else{
+            setLoginStatus("USUÁRIO E OU SENHA INVÁLIDOS!");
+            setTimeout(()=>{
+                setLoginStatus("");
+                setUsuario({
+                    "info":"login",
+                    "email":"",
+                    "senha":""
+                });
+            },5000);
         }
-    } catch (error) {
-        console.error("Erro durante a solicitação:", error);
-
     }
-};
-
-
+} catch (error) {
+}
+}
   return (
     <main className="login">
       <div className="form">
         <form className="formulario" onSubmit={handleSubmit}>
           <Link href="/"><FontAwesomeIcon icon={faArrowLeft} className='flecha' /></Link>
           <h1>Acessar Conta</h1>
+          <h2 className={classLogin}>{loginstatus}</h2>
           <div>
             <label htmlFor="Cpf">Preencha seus dados de acesso para continuar.</label>
-            <input type="text" id="Cpf" name='cpf' placeholder="CPF ou CNPJ" value={usuario.cpf} onChange={handleChange} />
+            <input type="text" id="Cpf" name='CPF' placeholder="CPF ou CNPJ" value={usuario.CPF} onChange={handleChange} />
           </div>
           <div>
             <label htmlFor="Senha"></label>
