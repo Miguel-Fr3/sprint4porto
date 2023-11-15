@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request, {params}) {
     
-    // const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
+    const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
 
     const id = params.id;
 
@@ -18,7 +18,7 @@ export async function GET(request, {params}) {
 
 //LOGIN
 const handleLogin = async (CPF,senha)=>{
-    // const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login/autenticar', 'utf8');
+    const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login/autenticar', 'utf8');
     const usuarios = await JSON.parse(file);
 
     try{
@@ -37,7 +37,7 @@ const handleLogin = async (CPF,senha)=>{
 
 //CADASTRO
 const handleCadastrar = async (CPF,senha)=>{
-    // const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
+    const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
     const usuarios = await JSON.parse(file);
 
     try{
