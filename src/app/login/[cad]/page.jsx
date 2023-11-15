@@ -1,6 +1,7 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
+import { randomUUID } from 'crypto';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -43,7 +44,7 @@ export default function Cadastro() {
         e.preventDefault();
         
         try {
-            const response = await fetch("http://localhost:8080/api/login/autenticar",{
+            const response = await fetch("http://localhost:8080/api/login",{
                 method: "POST",
                 headers:{
                     "Content-Type":"application/json"

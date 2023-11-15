@@ -11,7 +11,7 @@ https://github.com/Miguel-Fr3/sprint4porto
 Projeto java https://github.com/Miguel-Fr3/SprintJava4
 
 
-instruções para inicialização
+instruções para inicialização JAVA
 -abrir o repositorio
 -rodar o codigo
 -realizar login no front-end
