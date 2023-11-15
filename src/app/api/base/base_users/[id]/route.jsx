@@ -16,7 +16,7 @@ export async function GET(request, {params}) {
     }
 }
 
-//Criando a função do LOGIN
+//LOGIN
 const handleLogin = async (CPF,senha)=>{
     const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login/autenticar', 'utf8');
     const usuarios = await JSON.parse(file);
@@ -35,27 +35,27 @@ const handleLogin = async (CPF,senha)=>{
  }
 }
 
-//Criando a função do CADASTRO
+//CADASTRO
 const handleCadastrar = async (CPF,senha)=>{
     const file  = await  fs.readFile(process.cwd() + 'http://localhost:8080/api/login', 'utf8');
     const usuarios = await JSON.parse(file);
 
     try{
         
-        //Gerando o ID do usuário:
+
         const id =  (usuarios.usuarios[usuarios.usuarios.length-1].id + 1);
 
-        //Criando o objeto do usuário:
+
         const user = {
             "id":id,
             "CPF":CPF,
             "senha":senha
         }
 
-        //Adicionando o usuário no array:
+
         usuarios.usuarios.push(user);
 
-        //Salvando o arquivo:
+
         await fs.writeFile(process.cwd() + 'http://localhost:8080/api/login', JSON.stringify(usuarios));
 
         return user;
@@ -65,7 +65,7 @@ const handleCadastrar = async (CPF,senha)=>{
 }
 
 export async function POST(request, response){
-    //Pegando os dados do request com o await e destructuring.
+
     const {info,CPF,senha} = await request.json();
 
     console.log(info,CPF,senha);

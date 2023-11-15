@@ -58,12 +58,26 @@ body .login{
     width: 100%;
     height: 88.5vh;
 
+    .formulario .login{
+      height: 20px;
+      visibility: hidden;
+    }
     .formulario .login-suc h2{
       height: 50px;
       display: flex;
       justify-content: center;
       text-align: center;
       color: #2ac50b;
+      font-weight: bold;
+
+      font-size: 2.5rem;
+    }
+    .formulario .login-err h2{
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: #c50b0b;
       font-weight: bold;
 
       font-size: 2.5rem;
@@ -160,6 +174,10 @@ body .login{
       justify-content: center;
       width: 100%;
       height: 88.5vh;
+      .formulario .login{
+        visibility: hidden;
+        height: 20px;
+      }
       .formulario .login-suc h2{
         height: 50px;
         display: flex;
@@ -168,6 +186,16 @@ body .login{
         color: #2ac50b;
         font-weight: bold;
 
+        font-size: 2.5rem;
+      }
+      .formulario .login-err h2{
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #c50b0b;
+        font-weight: bold;
+  
         font-size: 2.5rem;
       }
     }
