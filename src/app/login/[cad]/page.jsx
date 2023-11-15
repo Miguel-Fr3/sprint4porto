@@ -58,7 +58,7 @@ export default function Cadastro() {
                     setCadStatus("Cadastrado!");
                     setTimeout(()=>{
                         setCadStatus("");
-                        router.push("/");
+                        router.push("/login");
                     },5000);
                 }else{
                     setCadStatus("OCORREU UM ERRO!");
