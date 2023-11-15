@@ -21,7 +21,7 @@ export default function Login() {
 });
 
 useEffect(() => {
-  if(loginstatus == "Login realizado com SUCESSO!"){
+  if(loginstatus == "Sucesso!"){
     setClassLogin("login-suc");
    }else if(loginstatus == "USUÁRIO E OU SENHA INVÁLIDOS!"){
     setClassLogin("login-err");

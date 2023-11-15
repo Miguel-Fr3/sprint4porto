@@ -1,7 +1,6 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import { randomUUID } from 'crypto';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,7 +21,7 @@ export default function Cadastro() {
     });
 
     useEffect(() => {
-       if(cadstatus == "Cadastro realizado com SUCESSO!"){
+       if(cadstatus == "Cadastrado!"){
           setClassCadMsg("login-suc");
         }else if(cadstatus == "OCORREU UM ERRO!"){
             setClassCadMsg("login-err");
@@ -59,7 +58,7 @@ export default function Cadastro() {
                     setCadStatus("Cadastrado!");
                     setTimeout(()=>{
                         setCadStatus("");
-                        router.push("/");
+                        router.push("/login");
                     },5000);
                 }else{
                     setCadStatus("OCORREU UM ERRO!");
