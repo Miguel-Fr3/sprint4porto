@@ -37,44 +37,62 @@ const handleChange = (e)=>{
   setUsuario({...usuario,[name]:value});
 }
 
-const handleSubmit = async (e)=>{
+const handleSubmit = async (e) => {
   e.preventDefault();
 
   try {
-    const response = await fetch("http://localhost:8080/api/login/autenticar",{
-        method: "POST",
-        headers:{
-            "Content-Type":"application/json"
-        },
-        body:  JSON.stringify(usuario)
-    });
+      const response = await fetch("http://localhost:8080/api/login/autenticar", {
+          method: "POST",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(usuario)
+      });
 
-    if(response.ok){
+      if (response.ok) {
         const user = await response.json();
-
-        if(user){
-
+    
+        if (user) {
             setLoginStatus("Sucesso!");
-            
-            setTimeout(()=>{
-              setLoginStatus("");
+    
+            setTimeout(() => {
+                setLoginStatus("");
                 router.push("/");
-            },5000);
-        }else{
-            setLoginStatus("USUÁRIO E OU SENHA INVÁLIDOS!");
-            setTimeout(()=>{
+            }, 5000);
+        } else {
+            const errorResponse = await response.json(); 
+            setLoginStatus(errorResponse.mensagem || "Erro desconhecido");
+            
+            setTimeout(() => {
                 setLoginStatus("");
                 setUsuario({
-                    "info":"login",
-                    "email":"",
-                    "senha":""
+                    "info": "login",
+                    "CPF": "",
+                    "senha": ""
                 });
-            },5000);
+            }, 5000);
         }
+    } else {
+
+        const errorResponse = await response.json();
+        setLoginStatus(errorResponse.mensagem || "Erro desconhecido");
+        
+        setTimeout(() => {
+            setLoginStatus("");
+            setUsuario({
+                "info": "login",
+                "CPF": "",
+                "senha": ""
+            });
+        }, 5000);
     }
-} catch (error) {
-}
-}
+    
+  } catch (error) {
+
+      console.error("Erro ao processar a requisição:", error);
+  }
+};
+
   return (
     <main className="login">
       <div className="form">
