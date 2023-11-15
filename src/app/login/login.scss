@@ -57,6 +57,18 @@ body .login{
     justify-content: center;
     width: 100%;
     height: 88.5vh;
+
+    .formulario h2{
+      height: 30px;
+      visibility: hidden;
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      color: #2ac50b;
+      font-weight: bold;
+      margin-bottom: 10px;
+      font-size: 2.5rem;
+    }
   }
   
   .form h1 {
@@ -68,6 +80,7 @@ body .login{
     margin-bottom: 25px;
     font-size: 2.5rem;
   }
+
   .flecha{
     font-size: 2rem;
   
@@ -148,6 +161,16 @@ body .login{
       justify-content: center;
       width: 100%;
       height: 88.5vh;
+      .formulario h2{
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: #2ac50b;
+        font-weight: bold;
+        margin-bottom: 25px;
+        font-size: 2.5rem;
+      }
     }
     
     .form h1 {

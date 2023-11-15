@@ -2,65 +2,81 @@
 import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import '../login.scss';
 
 export default function Cadastro() {
-  const router = useRouter();
 
-  const [usuario, setUsuario] = useState({
-    "info": "cadastro",
-    "cpf": "",
-    "senha": ""
-  });
+    const router = useRouter();
 
-  const handleChange = (e) => {
-    const { cpf, value } = e.target;
-    setUsuario({ ...usuario, [cpf]: value });
-  };
+    const [cadstatus, setCadStatus] = useState("");
+    const [classCadMsg, setClassCadMsg] = useState("");
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+    const [usuario, setUsuario] = useState({
+        "info":"cadastro",
+        "CPF":"",
+        "senha":""
+    });
 
-    try {
-      const response = await fetch('http://localhost:8080/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(usuario),
-      });
+    useEffect(() => {
+       if(cadstatus == "Cadastro realizado com SUCESSO!"){
+          setClassCadMsg("login-suc");
+        }else if(cadstatus == "OCORREU UM ERRO!"){
+            setClassCadMsg("login-err");
+        }else{
+            setClassCadMsg("login");
+        }
+    }, [cadstatus]);
+    
 
-      if (response.ok) {
-        const user = await response.json();
+    const handleChange = (e)=>{
 
-        if (user) {
-            setMsgStatus("Cadastro realizado com SUCESSO!");
-            setTimeout(()=>{
-            setMsgStatus("");
-            router.push("/");
-            },5000);
+        const{name, value} = e.target;
 
-        } else {
+        setUsuario({...usuario,[name]:value});
+    }
 
-            setUsuario({
-                "info": "cadastro",
-                "cpf": "",
-                "senha": ""
+
+    const handleSubmit = async (e)=>{
+        e.preventDefault();
+        
+        try {
+            const response = await fetch("http://localhost:8080/api/login/autenticar",{
+                method: "POST",
+                headers:{
+                    "Content-Type":"application/json"
+                },
+                body:  JSON.stringify(usuario)
             });
 
-        }
-      } else {
-        console.error('Erro na solicitação:', response.statusText);
+            if(response.ok){
+                const user = await response.json();
 
+                if(user){
+                    setCadStatus("Cadastrado!");
+                    setTimeout(()=>{
+                        setCadStatus("");
+                        router.push("/");
+                    },5000);
+                }else{
+                    setCadStatus("OCORREU UM ERRO!");
+                    setTimeout(()=>{
+                        setCadStatus("");
+                        setUsuario({
+                            "info":"cadastro",
+                            "CPF":"",
+                            "senha":""
+
+                        });
+                    },5000);
+                }
+            }
+        } catch (error) {
       }
-    } catch (error) {
-      console.error('Erro durante a solicitação:', error);
-
     }
-  };
+
 
   return (
     <main className="login">
@@ -70,9 +86,10 @@ export default function Cadastro() {
             <FontAwesomeIcon icon={faArrowLeft} className="flecha" />
           </Link>
           <h1>Cadastrar Conta</h1>
+          <h2 className={classCadMsg}>{cadstatus}</h2>
           <div>
             <label htmlFor="Cpf">Preencha seus dados de acesso para continuar.</label>
-            <input type="text" id="Cpf" name='cpf' placeholder="CPF ou CNPJ" value={usuario.cpf} onChange={handleChange} />
+            <input type="text" id="Cpf" name='CPF' placeholder="CPF ou CNPJ" value={usuario.CPF} onChange={handleChange} />
           </div>
           <div>
             <label htmlFor="Senha"></label>
